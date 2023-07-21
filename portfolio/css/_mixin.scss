@@ -1,0 +1,100 @@
+@import "./variables";
+
+
+@mixin mobile {
+  @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
+
+//폰트페이스
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: otf ttf woff2) {
+    $src: null;
+    $formats: (
+        otf: 'opentype',
+        ttf: 'truetype',
+        woff2: 'woff2'
+    );
+    @each $ext in $exts {
+        $format: map-get($formats, $ext);
+        $src: append($src, url(quote($path)) format(quote($format)), comma);
+    }
+    @font-face {
+        font-family: quote($name);
+        font-style: $style;
+        font-weight: $weight;
+        src: $src;
+    }
+}
+
+@mixin block($width, $length, $x, $y, $color, $layer){
+  position:absolute;
+  width:$width + px;
+  height:$length + px;
+  left:$x + px;
+  top:$y + px;
+  background:$color;
+  transform-style:preserve-3d;
+  transform:translateZ($layer * 10px);
+  &:before{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    background:$color;
+    transform-style:preserve-3d;
+    transform:translateZ(10px);
+  }
+  .front{
+    position:absolute;
+    transform-style:preserve-3d;
+    width:100%;
+    height:10px;
+    background:darken($color, 7.5%);
+    bottom:0;
+    left:0;
+    transform-origin:50% 0%;
+    transform:rotateX(90deg) translateZ(-10px);
+    &:before{
+      content:'';
+      position:absolute;
+      width:100%;
+      height:100%;
+      background:inherit;
+      transform:translateZ($length + px)
+    }
+  }
+  .side{
+    position:absolute;
+    transform-style:preserve-3d;
+    width:10px;
+    height:100%;
+    background:darken($color, 15%);
+    bottom:0px;
+    left:0;
+    transform-origin:0% 50%;
+    transform:translateZ(10px) rotateY(90deg);
+    &:before{
+      content:'';
+      position:absolute;
+      width:100%;
+      height:100%;
+      background:inherit;
+      transform:translateZ($width + px)
+    }
+  }
+}

@@ -1,0 +1,329 @@
+@import "./variables";
+@import "./mixin";
+
+/* 폰트 */
+@include font-face('SB_UI_B','../font/SFUI/SFUIText-Heavy.woff2',900,null,woff2);
+@include font-face('PretendardR','../font/Pretendard/Pretendard-Regular.woff2',900,null,woff2);
+@include font-face('SB_UI_B','../font/SFUI/SFUIText-Heavy.woff2',900,null,woff2);
+
+
+/* 여백 초기화 */
+html,body,div,ul,li,dl,dd,dt,ol,h1,h2,h3,h4,h5,h6,input,fieldset,legend,p,select,
+table,th,td,tr,textarea,button,form,figure,figcaption{margin:0;padding:0;}
+
+/* a 링크 초기화 */
+a {text-decoration: none;}
+a:hover {text-decoration: none;}
+
+/* 폰트 스타일 초기화 */
+em,address{font-style: normal;}
+em{color:red;}
+
+/* 블릿기호 초기화 */
+ul,li,ol {list-style: none;}
+
+/* 제목 태그 초기화 */
+h1,h2,h3,h4,h5,h6 {font-size:1rem; font-weight: 500; display:inline-block;}
+
+/* 버튼초기화 */
+button{border: 0;}
+
+/* 반응형 이미지 */
+img, video{width:100%;}
+img {width: 100%; vertical-align: top;}
+img {border:0;}  //ie10
+
+/* table */
+table{border-collapse: collapse;}
+
+/* IR 효과 */
+.ir_pm {display:block; overflow:hidden; font-size:0; line-height:0; text-indent:-9999px;} 
+/* 의미있는 이미지의 대체 텍스트를 제공하는 경우(Phark Method) */
+.ir_wa {display:block; overflow:hidden; position:relative; z-index:-1; width:100%; height: 100%;} 
+/* 의미있는 이미지의 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고자 할 때(WA IR) */
+.ir_su {overflow: hidden; position:absolute; width:0; height:0; line-height:0; text-indent:-9999px;} 
+/* 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때 */
+
+/* margin */
+.mt10{margin-top: 10px;}
+.mt15{margin-top: 15px;}
+.mt20{margin-top: 20px;}
+.mt25{margin-top: 25px;}
+.mt30{margin-top: 30px;}
+.mt35{margin-top: 35px;}
+.mt40{margin-top: 40px;}
+.mt45{margin-top: 45px;}
+.mt50{margin-top: 50px;}
+
+.mr10{margin-right: 10px;}
+.mr15{margin-right: 15px;}
+.mr20{margin-right: 20px;}
+.mr25{margin-right: 25px;}
+.mr30{margin-right: 30px;}
+.mr35{margin-right: 35px;}
+.mr40{margin-right: 40px;}
+.mr45{margin-right: 45px;}
+.mr50{margin-right: 50px;}
+
+.mb10{margin-bottom: 10px;}
+.mb15{margin-bottom: 15px;}
+.mb20{margin-bottom: 20px;}
+.mb25{margin-bottom: 25px;}
+.mb30{margin-bottom: 30px;}
+.mb35{margin-bottom: 35px;}
+.mb40{margin-bottom: 40px;}
+.mb45{margin-bottom: 45px;}
+.mb50{margin-bottom: 50px;}
+
+.ml10{margin-left: 10px;}
+.ml15{margin-left: 15px;}
+.ml20{margin-left: 20px;}
+.ml25{margin-left: 25px;}
+.ml30{margin-left: 30px;}
+.ml35{margin-left: 35px;}
+.ml40{margin-left: 40px;}
+.ml45{margin-left: 45px;}
+.ml50{margin-left: 50px;}
+
+/* padding */
+.pt10{padding-top: 10px;}
+.pt15{padding-top: 15px;}
+.pt20{padding-top: 20px;}
+.pt25{padding-top: 25px;}
+.pt30{padding-top: 30px;}
+.pt35{padding-top: 35px;}
+.pt40{padding-top: 40px;}
+.pt45{padding-top: 45px;}
+.pt50{padding-top: 50px;}
+
+.pl10{padding-left: 10px;}
+.pt15{padding-left: 15px;}
+.pl20{padding-left: 20px;}
+.pl25{padding-left: 25px;}
+.pl30{padding-left: 30px;}
+.pl35{padding-left: 35px;}
+.pl40{padding-left: 40px;}
+.pl45{padding-left: 45px;}
+.pl50{padding-left: 50px;}
+
+.pr10{padding-right: 10px;}
+.pr15{padding-right: 15px;}
+.pr20{padding-right: 20px;}
+.pr25{padding-right: 25px;}
+.pr30{padding-right: 30px;}
+.pr35{padding-right: 35px;}
+.pr40{padding-right: 40px;}
+.pr45{padding-right: 45px;}
+.pr50{padding-right: 50px;}
+
+.pb10{padding-bottom: 10px;}
+.pb15{padding-bottom: 15px;}
+.pb20{padding-bottom: 20px;}
+.pb25{padding-bottom: 25px;}
+.pb30{padding-bottom: 30px;}
+.pb35{padding-bottom: 35px;}
+.pb40{padding-bottom: 40px;}
+.pb45{padding-bottom: 45px;}
+.pb50{padding-bottom: 50px;}
+
+/* 공통 */
+#fullpage {position:relative;top:0px;z-index:9;width:100%;height:100%;}
+.fullsection{width:100%;height:100%;position:relative;}
+.full3{background:green;}
+.full4{background:blue;}
+.full5{background:purple;}
+#fullpage span{display:block;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;font-size:4em;font-weight:bold;}
+.full2 span{color:#000;}
+.quick {position:fixed;right:20px;top:50%;transform:translateY(-50%); z-index:100000}
+.quick li {width:10px;height:10px;margin-bottom:10px; border-radius:15px;border:2px solid #000;cursor:pointer;}
+.quick .on {background:#000;}
+
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 62.5%;
+  overflow:hidden;
+  body{
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-family: 'PretendardR';
+    overflow:hidden;
+    *{
+      box-sizing:border-box;
+    }
+    .section {
+      height: 100%;
+      &:not(.intro) {  
+       .inner {
+         padding: 0 20rem 0 20rem;
+         h2 {
+          margin-top: 10rem;
+           font-family: 'SB_UI_B';
+           font-size: 6rem;
+           letter-spacing: -0.17rem;
+           &+.profile-wrap {
+             margin-top: 1rem;
+           }
+         }
+       }
+      }
+      &.intro {
+       height:100%;
+       width:100%;
+       display:flex;
+       justify-content:center;
+       align-items:center;
+       background:$c;
+       padding: 0;
+        .wrap{
+          width:480px;
+          height:300px;
+          transform-style:preserve-3d;
+          transform:rotate(0deg) rotateX(0deg) rotateY(0deg);
+          perspective:100000px;
+          transform:rotate(0deg) rotateX(0deg) rotateY(0deg);
+          will-change:transform;
+          transition:0.5s ease-in-out;
+          box-shadow:0 0 0 2px darken($t, 10%);
+          &:hover{
+            transform:rotate(-45deg) rotateX(45deg) rotateY(45deg);
+            box-shadow:0 0 0 2px $t;
+          }
+          .inner{
+            position:absolute;
+            width:100%;
+            height:100%;
+            transform-style:preserve-3d;
+            background:rgba(0,0,0,0.15);
+          }
+          .block{
+            @for $b from 1 through length($blocks) {
+            &:nth-of-type(#{$b}){
+              @include block(
+                nth(nth($blocks, $b), 1),
+                nth(nth($blocks, $b), 2),
+                nth(nth($blocks, $b), 3),
+                nth(nth($blocks, $b), 4),
+                nth(nth($blocks, $b), 5),
+                nth(nth($blocks, $b), 6),
+                );
+             }
+            }
+          }
+        }
+      }
+      &.about {
+       .profile-wrap {
+         gap: 1rem;
+         .img-wrap {
+            width: 32rem;
+            height: auto;
+            text-align: center;
+            img {
+              width: 100%;
+              height: auto;
+              text-align: center;
+            }
+            &+.conts {
+              font-size: 2rem;
+              line-height: 140%;
+              word-break: keep-all;
+            }
+         }
+       }
+      }
+    }
+  }
+}
+
+/* 모바일 */
+@include mobile{ 
+  html {
+    font-size: 45%;
+    .section {
+      .inner {
+        padding: 0 6rem !important;
+        h2 {
+          margin-top: 6rem !important;
+          font-family: 'SB_UI_B';
+          font-size: 4rem !important;
+          letter-spacing: -0.17rem;
+        }
+      }
+      &+.about {
+        .inner {
+          h2 {
+            font-family: 'SB_UI_B';
+            font-size: 4rem;
+            letter-spacing: -0.17rem;
+            &+.profile-wrap {
+              margin-top: 2rem;
+            }
+          }
+          .profile-wrap {
+            display: block;
+            .img-wrap {
+              width: 100%;
+              margin: 0 auto;
+              img {
+                height: auto;
+                width: clamp(10vh, 60%, 20vh)
+              }
+              &+ .conts {
+                margin-top: 4rem;
+              }
+            }
+            
+          }
+        }
+      }
+    }
+    .scale-container {
+      -webkit-transform: scale(0.6);
+      -moz-transform: scale(0.6);
+      -ms-transform: scale(0.6);
+      -o-transform: scale(0.6);
+      transform: scale(0.6);
+    }
+    
+  }
+}
+
+/*태블릿*/
+@include tablet{
+  
+
+}
+
+/*데스크톱*/
+@include desktop{
+  html {
+    body{
+       .section {
+         &:not(.intro) {
+          .inner {
+            h2 {
+              &+.profile-wrap {
+                margin-top: 1rem;
+              }
+            }
+          }
+         }
+         &.about {
+          .profile-wrap {
+            display: flex;
+            .profile-img {
+              width: 15rem;
+              height: 15rem;
+            }
+            .conts {
+              word-break: keep-all;
+              line-height: 1.6;
+            }
+          }
+         }
+       }
+    }
+  }
+}

@@ -1,0 +1,275 @@
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+@font-face {
+	font-family: 'PretendardBL';
+	font-weight: 900;
+	font-display: swap;
+	src: local('Pretendard Black'), 
+	url('../font/Pretendard/Pretendard/Pretendard-Black.woff2') format('woff2'), 
+	url('../font/Pretendard/Pretendard-Black.woff') format('woff'),
+	url('../font/Pretendard/Pretendard-Black.ttf') format('ttf');
+}
+
+@font-face {
+	font-family: 'PretendardEB';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard ExtraBold'), 
+	url('../font/Pretendard/Pretendard-ExtraBold.woff2') format('woff2'), 
+	url('../font/Pretendard/Pretendard-ExtraBold.woff') format('woff'),
+	url('../font/Pretendard/Pretendard-ExtraBold.ttf') format('ttf');
+
+}
+
+@font-face {
+	font-family: 'PretendardB';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), 
+	url('../font/Pretendard/Pretendard-Bold.woff2') format('woff2'), 
+	url('../font/Pretendard/Pretendard-Bold.woff') format('woff'),
+	url('../font/Pretendard/Pretendard-Bold.ttf') format('ttf');
+}
+
+@font-face {
+	font-family: 'PretendardSB';
+	font-weight: 600;
+	font-display: swap;
+	src: local('Pretendard SemiBold'), 
+	url('../font/Pretendard/Pretendard-SemiBold.woff2') format('woff2'), 
+	url('../font/Pretendard/Pretendard-SemiBold.ttf') format('ttf');
+}
+
+@font-face {
+	font-family: 'PretendardM';
+	font-weight: 500;
+	font-display: swap;
+	src: local('Pretendard Medium'), 
+	url('../font/Pretendard/Pretendard-Medium.woff2') format('woff2'),
+	url('../font/Pretendard/Pretendard-Medium.ttf') format('ttf');
+}
+
+@font-face {
+	font-family: 'PretendardR';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), 
+	url('../font/Pretendard/Pretendard-Regular.woff2') format('woff2'), 
+	url('../font/Pretendard/Pretendard-Regular.woff') format('woff'),
+	url('../font/Pretendard/Pretendard-Regular.ttf') format('ttf');
+}
+
+@font-face {
+	font-family: 'PretendardL';
+	font-weight: 300;
+	font-display: swap;
+	src: local('Pretendard Light'), 
+	url('../font/Pretendard/Pretendard-Light.woff2') format('woff2'), 
+	url('../font/Pretendard/Pretendard-Light.woff2') format('woff2'), 
+	url('../font/Pretendard/Pretendard-Light.ttf') format('ttf');
+}
+
+@font-face {
+	font-family: 'PretendardEL';
+	font-weight: 200;
+	font-display: swap;
+	src: local('Pretendard ExtraLight'), 
+	url('../font/Pretendard/Pretendard-ExtraLight.woff2') format('woff2'), 
+	url('../font/Pretendard/Pretendard-ExtraLight.woff2') format('woff2'), 
+	url('../font/Pretendard/Pretendard-ExtraLight.ttf') format('ttf');
+}
+
+@font-face {
+	font-family: 'PretendardT';
+	font-weight: 100;
+	font-display: swap;
+	src: local('Pretendard Thin'), 
+	url('../font/Pretendard/Pretendard-Thin.woff2') format('woff2'), 
+	url('../font/Pretendard/Pretendard-Thin.ttf') format('ttf');
+}
+
+@font-face {
+	font-family: 'sfuitextR';
+	font-weight: 100;
+	font-display: swap;
+	src: local('SFUIText Regular'), 
+	url('../font/SFUI/SFUIText-Regular.woff2') format('woff2'),
+	url('../font/SFUI/SFUIText-Regular.woff') format('woff'),
+	url('../font/SFUI/SFUIText-Regular.ttf') format('ttf');
+}
+
+@font-face {
+	font-family: 'sfuitextB';
+	font-weight: 100;
+	font-display: swap;
+	src: local('SFUIText Bold'), 
+	url('../font/SFUI/SFUIText-Heavy.woff2') format('woff2'),
+	url('../font/SFUI/SFUIText-Heavy.woff') format('woff'),
+	url('../font/SFUI/SFUIText-Heavy.ttf') format('ttf');
+}
+
+
+/* common */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+:root {
+	--dark: rgb(20, 20, 20);
+	--yellow: rgb(253, 216, 53);
+	--blue: rgb(98, 0, 234);
+	
+	--c1: #393E46;
+	--c2: #C4FB6D;
+	
+	--left-color: var(--c1);
+	--right-color: var(--c2);
+  }
+ul, ol, li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+button, [role='button'] input[type='submit'] {
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+html {
+	font-size: 20px;
+	font-family: 'PretendardR';
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {display: block;}
+
+
+/* font */
+.ft_SF {font-family: 'sfuitextR';}
+.ft_SF_B {font-family: 'sfuitextB';letter-spacing: -0.1rem;}
+.ft_6ba15a {color: #6ba15a}
+
+/* header */
+header {position: fixed;z-index: 1000;width: 100%; height: 9rem;padding: 0 3rem;display: flex;align-items: center;justify-content:space-between;}
+header > a {display: flex;color: #C4FB6D;font-size: 2.5rem;text-shadow: 2px 3px #607b35, 0 -2px 3px #607b35, -2px 3px #607b35, 0 2px 3px #607b35;letter-spacing: -0.77rem !important; }
+header > button {display: inline-flex;z-index: 999;}
+header .btn_nav {
+    z-index: 999;
+    width: 2rem;
+    height: 2rem;
+    background: none;
+    position: relative;
+	border: 0;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-flexbox;
+    display: inline-flex;
+    margin-top: 0.699em;
+    color: #222831;
+}
+header .btn_nav::before, header .btn_nav::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-color: currentColor;
+}
+header .btn_nav::before {
+    top: 0;	
+}
+header .btn_nav::after {
+    right: 0;
+    width: 72%;
+    top: 1rem;
+}
+nav {opacity: 0;visibility: hidden;pointer-events: none;}
+
+/** 
+content
+**/
+
+/* cotent common */
+section {margin: 0;}
+section:not(.intro) {min-height: 100vh;padding: 0 10rem;}
+section .inner {padding-top: 10rem;padding-bottom: 8rem;}
+section .inner > h2 {font-size: 3rem;font-weight: 900;font-family: 'sfuitextB';letter-spacing: -0.1rem;}
+.tit + .sub {margin-top: 1rem;}
+
+/* section 1 - Intro */
+.intro {position: relative;overflow: hidden;height: 36rem;/*background: linear-gradient(90deg, #222831 67%, #A2FF86 33%);*/background-color: var(--dark);margin: 0px; padding: 0;}
+.intro .inner {display: flex;justify-content:space-between;}
+.intro .side {display: block;height: 100%;overflow: hidden;place-items: center;position: absolute;width: 100%;padding-top: 9rem;}
+.intro .side .text-wrap {padding: 0 10rem;margin-top: 2rem;position: relative;z-index: 2;}
+.intro .side .text-wrap .title {font-size: 5rem;width: 80vw;font-family: 'Righteous', serif;text-shadow: 0.2rem 0.2rem 0 #a0d055;margin-top: 4rem;}
+.intro .side .text-wrap .fancy {font-size: 8rem;text-shadow: 0.03em 0.03em 0 #eeeeee;line-height: 0.8em;font-family: 'Righteous', serif;}
+.intro .side#left-side {background-color: var(--left-color);width: 60%;z-index: 3;}
+.intro .side#left-side svg {position: absolute;top: 0;left: 0;}
+.intro .side#left-side .fancy {color: var(--right-color);}
+.intro .side#left-side .title {color: white;}
+.intro .side#right-side {background-color: var(--right-color);}
+.intro .side#right-side svg {position: absolute;top: 0;left: 0;}
+.intro .side#right-side .text-wrap {position: relative;z-index: 2;}
+.intro .side#right-side .fancy {color: white;text-shadow: 0.03em 0.03em 0 #aeaeae;}
+.intro .side#right-side .title {color: var(--dark);}
+.intro .side#right-side picture {z-index: 1;}
+.intro .text-wrap .dynamic-tit-1 {position: relative;display: inline-block;color: #fff;font-family: 'Righteous', serif;font-size: 12em;text-shadow: 0.03em 0.03em 0 #A2FF86;}
+.intro .text-wrap .dynamic-tit-1::after {content: attr(data-shadow);position: absolute;top: 0.6rem;left: 0.6rem;z-index: -1;text-shadow: none;background-image: linear-gradient( 45deg, transparent 45%, hsla(48,20%,90%,1) 45%, hsla(48,20%,90%,1) 55%, transparent 0 );background-size: 0.6rem 0.6rem;-webkit-background-clip: text;-webkit-text-fill-color: transparent;animation: shad-anim 20s linear infinite;}
+.intro .text-wrap .dynamic-tit-2 {position: relative;display: inline-block;color: #fff;font-family: 'Righteous', serif;font-size: 12em;text-shadow: 0.03em 0.03em 0 #A2FF86;z-index: 1;}
+.intro .text-wrap .dynamic-tit-2::after {content: attr(data-shadow);position: absolute;top: 0.6rem;left: 0.6rem;z-index: -1;text-shadow: none;background-image: linear-gradient( 45deg, transparent 45%, #393E46 45%, #393E46 55%, transparent 0 );background-size: 0.6rem 0.6rem;-webkit-background-clip: text;-webkit-text-fill-color: transparent;animation: shad-anim 30s linear infinite;}	  
+@keyframes shad-anim {0% {background-position: 0 0}0% {background-position: 100% -100%}}
+.intro p {font-size: 1rem;line-height: 1.7rem;color: #fff;}
+.intro picture {position: absolute; bottom: 0; left: 57vw; z-index: 1;}
+.intro picture .img_bg {display: block;background-size: cover;background-position: top;overflow: hidden;}
+.intro #left-side picture .img_bg {background-image: url('../images/hj_mimoticon.png');width: 30rem;height: 30rem;}
+.intro #right-side picture .img_bg {background-image: url('../images/hj_mimoticon_2.png');width: 29rem;height: 29rem;}
+
+/* section 2 - about */
+.about {background-color: #EEEEEE;}
+.about .inner > h2 {color:var(--c1);}
+.about .profile-wrap {display: flex;margin-top: 2rem;}
+.about .profile-wrap .conts {display: flex;color: #393E46;font-size: 0.8rem;line-height: 1.2rem;}
+.about .profile-wrap .profile-img {display: flex;margin-right: 2rem;background-size: cover;background-position: top;overflow: hidden;background-image: url(../images/hj_mimoticon.png);width: 12rem;height: 12rem;}
+/* section 3 - project */
+.project {background-color: #393E46;}
+.project .inner > h2 {color:var(--c2);}
+/* section 4 -skill */
+.skill {background-color: #76EAD7;}
+
+/* section 5 -conect */
+.conect {background-color: #C4FB6D;}
+
+
+
+
+/* ?? */
+
+
+
+/*  */
